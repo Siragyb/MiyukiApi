@@ -2,7 +2,7 @@
   "name": "PedrozzRest",
   "version": "2.1.0",
   "description": "BASE API VIP",
-  "main": "api.js",
+  "main": "site.js",
   "scripts": {
     "start": "sh start.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -160,10 +160,10 @@
     "translate-google": "^1.5.0",
     "sharp": "0.27.2", 
     "uuid": "^1.0.0", 
-    "twemoji-parser": "^1.0.0",
-    "simple-get": "^1.0.0",
+    "twemoji-parser": "^x",
+    "simple-get": "^x",
     "rsnchat": "^3.0.10",
-    "musicard-quartz": "^1.0.0",
+    "musicard-quartz": "^x",
     "musicard": "^2.0.5"
   },
   "homepage": ""
