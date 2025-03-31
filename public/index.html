@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="House-APIS - Plataforma avançada.">
+    <meta name="author" content="Ninja Shadow">
+    <meta name="keywords" content="APIs, House-Rest">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <title>House-APIS</title>
+    <link rel="icon" href="https://files.catbox.moe/ewiv2i.jpg" type="image/png">
+    <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #1c1c1e);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            transition: background 0.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-family: 'Bebas Neue', sans-serif;
+            color: cyan;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px cyan, 0 0 30px cyan;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: white;
+            opacity: 0.9;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-container img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid cyan;
+            box-shadow: 0px 0px 20px cyan;
+            animation: pulse 2s infinite alternate;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 1.2em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: cyan;
+            background: transparent;
+            border: 2px solid cyan;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 220px;
+            justify-content: center;
+            box-shadow: 0 0 12px cyan;
+        }
+
+        .button:hover {
+            background: cyan;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .input-container {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .input-container input {
+            padding: 12px;
+            font-size: 1.1em;
+            font-family: 'Poppins', sans-serif;
+            width: 260px;
+            border-radius: 25px;
+            border: 2px solid cyan;
+            background: #121212;
+            color: white;
+            outline: none;
+            text-align: center;
+            box-shadow: 0 0 12px cyan;
+        }
+
+        .input-container input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0px 0px 20px cyan; }
+            100% { box-shadow: 0px 0px 30px cyan; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HOUSE-APIS 🚀</h1>
+    <h2>Explore a tecnologia sem limites.</h2>
+
+    <div class="image-container">
+        <img src="https://files.catbox.moe/ewiv2i.jpg" alt="House-APIS">
+    </div>
+
+    <div class="button-container">
+        <a href="/dash" class="button">
+            <i class="mdi mdi-view-dashboard"></i> Dashboard
+        </a>
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="bgInput" placeholder="Cole um link de imagem">
+        <button class="button" onclick="changeBackground()">Mudar Fundo</button>
+    </div>
+
+    <footer>
+        Desenvolvido com 💙 por Ninja Shadow.
+    </footer>
+
+    <script>
+        function changeBackground() {
+            let imageUrl = document.getElementById("bgInput").value;
+            if (imageUrl) {
+                document.body.style.background = `url('${imageUrl}')`;
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+                document.body.style.backgroundAttachment = "fixed";
+            } else {
+                alert("Insira um link de imagem válido!");
+            }
+        }
+    </script>
+
+</body>
+</html>
