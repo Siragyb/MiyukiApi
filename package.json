@@ -25,7 +25,6 @@
     "assemblyai": "^2.0.2",
     "miniget": "^4.2.2", 
     "async": "^3.2.3",
-    "@google/generative-ai": "^0.0.0",
     "connect-flash": "^0.1.1",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "ultimate-text-to-image": "^1.0.1",
